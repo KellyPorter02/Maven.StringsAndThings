@@ -15,8 +15,21 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
-    }
+        int letterCounter = 0;                                  // we made a counter for the loop
+        String[] words = input.split(" ");                // made a new string array, called words. made up of the string 'input'. split up based on spaces
+                                                                // words = ["fez", "day"]
+        for (String w: words) {                                 // made a new string called w. something with the array called words. for each value
+                                                                // of the array called words, we have a string called w. w is "fez", w is "day"
+            int n = w.length();                                 // made an integer called n that is set to the length of the string w.  (length of w is 3, for fez)
+                                                                // which comes from the values of the array called words
+            if (w.charAt(n-1) == 'Y' || w.charAt(n-1) == 'Z');  // if the character at the end of the string called w(the string "fez"), is equal to the char 'Y'
+                                                                // or 'Z', increase the letter counter
+                letterCounter++;
+            }
+            return letterCounter;                               // return the letter counter.
+        }
+
+
 
     /**
      * Given two strings, base and remove, return a version of the base string where all instances of the remove string have
@@ -28,6 +41,11 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
+        /*
+
+         */
+        int i = base.indexOf(remove);    //returns index of the first occurrence of 1st element in remove array; sets == to i
+
         return null;
     }
 
@@ -40,6 +58,17 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
+        int isCounter = 0;
+        int notCounter = 0;
+
+        /* how do I count the number of occurrences in input?
+
+        if (isCounter == notCounter) {
+            return true;
+        } else
+            return false;
+
+
         return null;
     }
 
